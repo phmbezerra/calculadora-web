@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Calculadora Web | Paulo Henrique</title>
+  <meta
+    name="description"
+    content="Calculadora web moderna com suporte a teclado, histórico, porcentagem, raiz quadrada e tema alternativo."
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="bg-glow glow-1"></div>
+  <div class="bg-glow glow-2"></div>
+
+  <main class="app-shell">
+    <section class="intro-card">
+      <span class="eyebrow">Projeto Front-end</span>
+      <h1>Calculadora Web</h1>
+      <p>
+        Uma calculadora moderna desenvolvida com HTML, CSS e JavaScript,
+        com foco em interface polida, interatividade e experiência do usuário.
+      </p>
+
+      <div class="intro-points">
+        <div class="intro-point">
+          <strong>Suporte a teclado</strong>
+          <span>Use números, operadores, Enter, Backspace e Esc.</span>
+        </div>
+
+        <div class="intro-point">
+          <strong>Histórico</strong>
+          <span>Veja os cálculos recentes sem perder o contexto.</span>
+        </div>
+
+        <div class="intro-point">
+          <strong>Tema alternativo</strong>
+          <span>Alterne entre modo escuro e claro.</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="calculator-panel">
+      <div class="calculator-topbar">
+        <div>
+          <p class="mini-label">Calculadora</p>
+          <h2>Operações rápidas</h2>
+        </div>
+
+        <button
+          class="theme-toggle"
+          id="theme-toggle"
+          type="button"
+          aria-label="Alternar tema"
+          title="Alternar tema"
+        >
+          <span id="theme-icon">🌙</span>
+        </button>
+      </div>
+
+      <div class="display-wrap">
+        <div class="expression-preview" id="expression-preview">Pronto para calcular</div>
+        <div class="display" id="display">0</div>
+      </div>
+
+      <div class="calculator-layout">
+        <section class="calculator">
+          <div class="buttons" id="buttons">
+            <button class="action" data-action="clear">C</button>
+            <button class="action" data-action="backspace">⌫</button>
+            <button class="action" data-action="percent">%</button>
+            <button class="operator" data-value="/">÷</button>
+
+            <button class="action" data-action="sqrt">√</button>
+            <button data-value="(">(</button>
+            <button data-value=")">)</button>
+            <button class="operator" data-value="*">×</button>
+
+            <button data-value="7">7</button>
+            <button data-value="8">8</button>
+            <button data-value="9">9</button>
+            <button class="operator" data-value="-">−</button>
+
+            <button data-value="4">4</button>
+            <button data-value="5">5</button>
+            <button data-value="6">6</button>
+            <button class="operator" data-value="+">+</button>
+
+            <button data-value="1">1</button>
+            <button data-value="2">2</button>
+            <button data-value="3">3</button>
+            <button class="equals" data-action="calculate">=</button>
+
+            <button class="zero" data-value="0">0</button>
+            <button data-value=".">.</button>
+          </div>
+        </section>
+
+        <aside class="history-card">
+          <div class="history-head">
+            <div>
+              <p class="mini-label">Histórico</p>
+              <h3>Cálculos recentes</h3>
+            </div>
+
+            <button class="history-clear" id="clear-history" type="button">
+              Limpar
+            </button>
+          </div>
+
+          <ul class="history-list" id="history-list">
+            <li class="history-empty">Nenhum cálculo realizado ainda.</li>
+          </ul>
+        </aside>
+      </div>
+
+      <p class="hint">
+        Dica: use o teclado para calcular mais rápido.
+      </p>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
