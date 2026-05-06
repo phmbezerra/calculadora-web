@@ -233,6 +233,4 @@ Este projeto faz parte da construção do meu portfólio de desenvolvimento web 
 <div align="center">
 Obrigado por visitar este projeto.
 
-Uma calculadora simples pode virar um projeto muito mais forte quando a experiência do usuário também evolui.
-
 </div>
